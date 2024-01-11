@@ -43,13 +43,13 @@ const UserForm = () => {
   return (
     <div>
       <h5 id="current-user">
-        Current user: {user.name},isAuthenticated: {`${user.isAuthenticated}`}
+        Current user: {user.name},isAuthenticated: {user.isAuthenticated?"Yes":"No"}
       </h5>
       <form onSubmit={(e) => {e.preventDefault();}}>
         
         <button 
           id="login-btn"
-          onClick={() =>setUser({ ...user, isAuthenticated: true, name: "rohan" })}
+          onClick={() =>setUser({ ...user, isAuthenticated: true, name: "Ted" })}
         > Login </button>
         
         <button
