@@ -36,7 +36,6 @@ const UserForm = () => {
       alert("User is not Logged in. Please log in first");
     }
   };
-
   const handleRemove = (removeItem) => {
     setUser({...user, listArr : user.listArr.filter(item => item.id !== removeItem.id)})
   };
