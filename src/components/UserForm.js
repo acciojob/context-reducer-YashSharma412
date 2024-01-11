@@ -72,7 +72,7 @@ const UserForm = () => {
         <div>
           {
             user.listArr.length !== 0 && user.listArr.map((item) => (
-                <div>
+                <div key={item.localMsg}>
                     <button
                       id={`remove-${item.localMsg}`}
                       onClick={() => handleRemove(item)}
