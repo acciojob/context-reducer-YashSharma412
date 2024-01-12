@@ -68,27 +68,24 @@ const UserForm = () => {
 
         <button onClick={() => handleAdd()}>Add</button>
         <button id="clear-list" onClick={() => handleClear()}>Clear List</button>
-
-        <div>
-          {
-            user.listArr.length !== 0 && user.listArr.map((item) => (
-                <div 
-                  key={item.localMsg} 
-                  id={`item-${item.localMsg}`}
-                >
-                    <button
-                      id={`remove-${item.localMsg}`}
-                      onClick={() => handleRemove(item)}
-                    > 
-                    Remove 
-                    </button>
-                    <span > 
-                      {item.localMsg} 
-                    </span>
-                </div>
-              ))
-          }
-        </div>
+        {
+          user.listArr.length !== 0 && user.listArr.map((item) => (
+              <div 
+                key={item.localMsg} 
+                id={`item-${item.localMsg}`}
+              >
+                  <button
+                    id={`remove-${item.localMsg}`}
+                    onClick={() => handleRemove(item)}
+                  > 
+                  Remove 
+                  </button>
+                  <span > 
+                    {item.localMsg} 
+                  </span>
+              </div>
+            ))
+        }        
       </form>
     </div>
   );
