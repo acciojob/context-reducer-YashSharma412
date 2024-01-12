@@ -43,7 +43,7 @@ const UserForm = () => {
   return (
     <div>
       <h5 id="current-user">
-        Current user: {user.name},isAuthenticated: {user.isAuthenticated?"Yes":"No"}
+        Current user:{user.name}, isAuthenticated: {user.isAuthenticated?"Yes":"No"}
       </h5>
       <form onSubmit={(e) => {e.preventDefault();}}>
         
@@ -72,12 +72,19 @@ const UserForm = () => {
         <div>
           {
             user.listArr.length !== 0 && user.listArr.map((item) => (
-                <div key={item.localMsg}>
+                <div 
+                  key={item.localMsg} 
+                  id={`item-${item.localMsg}`}
+                >
                     <button
                       id={`remove-${item.localMsg}`}
                       onClick={() => handleRemove(item)}
-                    > Remove </button>
-                    <span id={`item-${item.localMsg}`}> {item.localMsg} </span>
+                    > 
+                    Remove 
+                    </button>
+                    <span > 
+                      {item.localMsg} 
+                    </span>
                 </div>
               ))
           }
