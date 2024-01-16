@@ -68,6 +68,7 @@ const UserForm = () => {
 
         <button onClick={() => handleAdd()}>Add</button>
         <button id="clear-list" onClick={() => handleClear()}>Clear List</button>
+        </form>
         <ul>
         {
           user.listArr.length !== 0 && user.listArr.map((item) => (
@@ -88,7 +89,7 @@ const UserForm = () => {
             ))
         }  
         </ul>        
-      </form>
+      
     </div>
   );
 };
