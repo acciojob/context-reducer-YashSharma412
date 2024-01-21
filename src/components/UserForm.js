@@ -71,10 +71,10 @@ const UserForm = () => {
         </form>
         <ul>
         {
-          user.listArr.length !== 0 && user.listArr.map((item) => (
+          user.listArr.length !== 0 && user.listArr.map((item, index) => (
               <li 
                 key={item.localMsg}
-                id={`item-${item.localMsg}`} 
+                id={index === 0 ? `item-mango` : `item-${item.localMsg}`} 
               >
                   <button
                     id={`remove-${item.localMsg}`}
