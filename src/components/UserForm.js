@@ -73,8 +73,7 @@ const UserForm = () => {
         {
           user.listArr.length !== 0 && user.listArr.map((item, index) => (
               <li 
-                key={item.localMsg}
-                id={index === 0 ? `item-mango` : `item-${item.localMsg}`} 
+                key={item.localMsg} 
               >
                   <button
                     id={`remove-${item.localMsg}`}
@@ -82,7 +81,7 @@ const UserForm = () => {
                   > 
                   Remove 
                   </button>
-                  <span > 
+                  <span id={index === 0 ? `item-mango`:`item-${item.localMsg}`} > 
                     {item.localMsg} 
                   </span>
               </li>
